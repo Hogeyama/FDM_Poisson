@@ -1,0 +1,4 @@
+resolver: lts-8.6
+extra-deps:
+- sized-types-0.5.1
+- vector-space-0.10.4
