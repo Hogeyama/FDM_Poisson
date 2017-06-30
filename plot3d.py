@@ -36,9 +36,7 @@ def to2Dcull(x,n):
 
 # Plot
 fig = plt.figure()
-xs,ys,zs,ws = map(lambda w: to2Dcull(w,2) , readCSV('./plot/solve.csv'))
-xa,ya,za,wa = map(lambda w: to2Dcull(w,2) , readCSV('./plot/solve.csv'))
-
+xs,ys,zs,ws = map(lambda w: to2Dcull(w,2) , readCSV('./plot/plot.csv'))
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_wireframe(xs, ys, ws)
 ax.scatter(xs, ys, zs)

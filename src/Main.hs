@@ -151,7 +151,7 @@ repetitionChart = toRenderable layout
 main :: IO ()
 main = do
   -- CSV for "plot3d.py"
-  withFile "plot/solve.csv" WriteMode $ \h ->
+  withFile "plot/plot.csv" WriteMode $ \h ->
     forM_ (answer $ solvePoisson (example :: PoissonDef 50)) $ \(x,y,z) ->
       hPutStrLn h $ unwords $ intersperse "," $ map show [x,y,z,actual_u x y]
 
